@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amadon</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container bg-primary">
+		<div class="row justify-content-center">
+			<h1 class="text-warning">Amazojo Store!</h1>
+		</div>
+		<table class="table">
+			<thead class="text-light">
+				<tr>
+					<th scope="col">Item</th>
+					<th scope="col">Price</th>
+					<th scope="col">Quantity</th>
+					<th scope="col">Purchase</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="bg-warning text-primary">
+					<td>Dojo T-Shirt</td>
+					<td>$19.99</td>
+					<form action='buy' method='post'>
+							{% csrf_token %}
+						<td><select name='quantity'>
+							<option value='1'>1</option>
+							<option value='2'>2</option>
+							<option value='3'>3</option>
+						</select></td>
+						<td>
+							<input type="hidden" name="product_id" value='p1'>
+							<input type="submit" value="Buy" class="btn btn-primary text-warning" role="button">
+						</td>
+					</form>
+				</tr>
+				<tr class="text-warning">
+					<td>Dojo Sweater</td>
+					<td>$24.99</td>
+					<form action='buy' method='post'>
+							{% csrf_token %}
+						<td><select name='quantity'>
+							<option value='1'>1</option>
+							<option value='2'>2</option>
+							<option value='3'>3</option>
+						</select></td>
+						<td>
+							<input type="hidden" name="product_id" value='p2'>
+							<input type="submit" value="Buy" class="btn btn-warning text-primary" role="button">
+						</td>
+					</form>
+				</tr>
+				<tr class="bg-warning text-primary">
+					<td>Dojo Cup</td>
+					<td>$8.50</td>
+					<form action='buy' method='post'>
+							{% csrf_token %}
+						<td><select name='quantity'>
+							<option value='1'>1</option>
+							<option value='2'>2</option>
+							<option value='3'>3</option>
+						</select></td>
+						<td>
+							<input type="hidden" name="product_id" value='p3'>
+							<input type="submit" value="Buy" class="btn btn-primary text-warning" role="button">
+						</td>
+					</form>
+				</tr>
+				<tr class="text-warning">
+					<td>Algo Book</td>
+					<td>$49.99</td>
+					<form action='buy' method='post'>
+							{% csrf_token %}
+						<td><select name='quantity'>
+							<option value='1'>1</option>
+							<option value='2'>2</option>
+							<option value='3'>3</option>
+						</select></td>
+						<td>
+							<input type="hidden" name="product_id" value='p4'>
+							<input type="submit" value="Buy" class="btn btn-warning text-primary" role="button">
+						</td>
+					</form>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
